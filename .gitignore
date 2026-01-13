@@ -1,0 +1,22 @@
+# --- Python Artifacts ---
+# Compiled python files (Computer speak, not for humans)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+# If you create a venv, we don't want to upload 100MB of library files
+venv/
+env/
+.env
+
+# --- IDE Settings (PyCharm/VS Code) ---
+# These are YOUR personal settings (theme, window layout).
+# Other developers don't want these.
+.idea/
+.vscode/
+
+# --- OS Files ---
+# Mac/Windows clutter
+.DS_Store
+Thumbs.db
