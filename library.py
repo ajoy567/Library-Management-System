@@ -25,4 +25,22 @@ class Library:
         else:
             print("The Book is not available in this library.")
 
+    def return_book(self, user, isbn):
+        found_book = None
+
+        for book in self.catalog:
+            if book.isbn == isbn:
+                found_book = book
+                break
+
+        if found_book is not None:
+            if found_book in user.borrowed_books:
+                user.borrowed_books.remove(found_book)
+                found_book.is_available = True
+                print(f"Success! {user.first_name} returned {found_book.title}.")
+            else:
+                print(f"Error: {user.first_name} does not have this book.")
+        else:
+            print("Error: This book does not belong to our library.")
+
 

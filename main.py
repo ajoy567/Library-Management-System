@@ -30,6 +30,18 @@ def main():
     for book in user.borrowed_books:
         print(book)
 
+
+    print("\n--- 1. Raj returns the book ---")
+    my_library.return_book(user, "978-0547928227")
+
+    print(f"\n--- 2. {user.first_name}'s Backpack after return ---")
+    for book in user.borrowed_books:
+        print(book)
+
+    print("\n--- 3. Library Catalog ---")
+    for b in my_library.catalog:
+        print(b)
+
 if __name__ == "__main__":
     main()
 
